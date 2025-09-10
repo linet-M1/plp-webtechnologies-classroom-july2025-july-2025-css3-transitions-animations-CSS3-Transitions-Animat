@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP Website - Week 7</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- =======================
+       Header Section
+       Purpose: Website title and intro
+       ======================== -->
+  <header>
+    <h1>Event RSVP</h1>
+    <p>Welcome! Please RSVP to our event below.</p>
+  </header>
+
+  <!-- =======================
+       RSVP Form Section
+       Purpose: Users enter name & attendance choice
+       Interactive element: JS validation & animations
+       ======================== -->
+  <section id="rsvp-form-section">
+    <form id="rsvpForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="attendance">Will you attend?</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">--Select--</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <button type="submit" id="submitBtn">Submit RSVP</button>
+    </form>
+  </section>
+
+  <!-- =======================
+       Confirmation Section
+       Purpose: Display success/failure messages
+       Interactive element: JS triggers animations when RSVP is submitted
+       ======================== -->
+  <section id="confirmation" class="hidden">
+    <p id="confirmationMessage"></p>
+  </section>
+
+  <!-- =======================
+       Attendee List Section
+       Purpose: Display all RSVPs dynamically
+       Interactive element: JS dynamically adds attendees with animation
+       ======================== -->
+  <section id="attendee-list-section">
+    <h2>Attendees</h2>
+    <ul id="attendeeList">
+      <!-- JS will populate this list -->
+    </ul>
+  </section>
+
+  <!-- =======================
+       Footer Section
+       Purpose: Website footer info
+       ======================== -->
+  <footer>
+    <p>&copy; 2025 RSVP Event</p>
+  </footer>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
